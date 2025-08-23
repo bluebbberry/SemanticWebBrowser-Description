@@ -32,95 +32,204 @@
 \tableofcontents
 \newpage
 
-\section{Einleitung}
+\section{Introduction}
 
-Dies ist ein Beispieldokument, das die Verwendung von LaTeX mit deutscher Sprache demonstriert. LaTeX ist ein leistungsfähiges Textsatzsystem, das besonders in der wissenschaftlichen Welt weit verbreitet ist.
+This text is a description of a next level SemanticWebBrowser, which tries to achieve various properties of semantic web applications in one app with a focus on semantic web data and technology. However, the problem here is that the current web is fragmented and there needs to be a mechanism to bridge the gap here. For this, controlled forward propagation is introduced as a potential solution:
 
-\subsection{Vorteile von LaTeX}
+The innovation here would be to combine Neuro Symbolic AI with ACE to achieve a language-based interface (controlled natural language as an interface), expand on the "Neural | Symbolic"-AI-approach with the controlled forward propagation mechanism to overcome the limitations of the mismatch between different web paradigms without loosing the semantic-web-defining precision and determinism (paradigm agnostic but deterministic), and to build a IDE-like semantic web browser from it all.
 
-LaTeX bietet viele Vorteile gegenüber herkömmlichen Textverarbeitungsprogrammen:
+Its a combination of three main idea, which have all been explored before but not combined into one product:
 
 \begin{itemize}
-    \item Professionelle Typographie
-    \item Automatische Nummerierung von Kapiteln, Abschnitten und Formeln
-    \item Einfache Verwaltung von Literaturverzeichnissen
-    \item Plattformunabhängigkeit
-    \item Kostenlos und open source
+    \item A semantic web browser with an IDE-like, language-based interface to explore the semantic web
+    \item Using ACE as a semantic web interface to increase usability
+    \item Using LLMs to achieve web-paradigm agnostic semantic queries without losing determinism and semantic precision
 \end{itemize}
 
-\section{Mathematische Formeln}
+\section{A CLI for the WWW, or: finding an interface for a semantic web browser that is useable}
 
-LaTeX eignet sich hervorragend für das Setzen mathematischer Formeln. Hier sind einige Beispiele:
+\subsection{Introduction}
 
-\subsection{Inline-Mathematik}
-Der Satz des Pythagoras besagt, dass $a^2 + b^2 = c^2$ für rechtwinklige Dreiecke gilt.
+``The Semantic Web is an extension of the Web where information is represented in a machine-process able way. Users can access the information on the Semantic Web using a Web browser such as Explorer or Safari. However, since the information is typically represented in RDF (Resource Description Framework), it is not always easy to understand what the information means. While existing Semantic Web browsers can help users understand the information on the Semantic Web, users need to have some knowledge on RDF and XML which is a base representation format for RDF.''
 
-\subsection{Abgesetzte Formeln}
-Die Euler'sche Identität ist eine der schönsten Formeln der Mathematik:
-\begin{equation}
-    e^{i\pi} + 1 = 0
-\end{equation}
+From ``A Semantic Web Browser for Novice Users'' by Younghwan Kim; Sujin Yoo; Seongbin Park
 
-Die quadratische Formel lautet:
-\begin{equation}
-    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\end{equation}
+\subsection{Abstract}
 
-\section{Deutsche Sonderzeichen}
+The fundamental idea of this paper is for ChatGPT-like apps to lose natural language for less energy consumption and more determinism in their answers based on controlled natural languages like ACE; for the user to be able to modify this trade-off-ratio at will based on LLMs (which is not possible when starting from a ChatGPT-like app); and to capture this new paradigm in a new type of browser that has natural language as its primary interface, here called a semantic web-first browser.
 
-LaTeX kann problemlos mit deutschen Umlauten und dem Eszett umgehen: ä, ö, ü, Ä, Ö, Ü, ß.
+The basic assumption of this paper is that the main reason why the semantic web has not had a break-through yet is, because its merits have not yet found its way to the end user, because there has not yet an interface been found to interact with the semantic web in a meaningful way that appeals to the masses. In this paper, controlled natural language is introduced as a main way to interact with the semantic web and based on this observation, the architecture for a semantic-first web browser is proposed.
 
-Auch Anführungszeichen werden korrekt dargestellt: "`Deutsche Anführungszeichen"' sehen so aus.
-
-\section{Listen und Aufzählungen}
-
-\subsection{Nummerierte Liste}
+The five main points this paper makes are:
 \begin{enumerate}
-    \item Erster Punkt
-    \item Zweiter Punkt
-        \begin{enumerate}
-            \item Unterpunkt a
-            \item Unterpunkt b
-        \end{enumerate}
-    \item Dritter Punkt
+    \item There has not yet been found a sufficient interface for the semantic web to be appealing to end-users and reach wider adoption
+    \item Controlled natural language like ACE could serve well as a main interface for semantic data, because they manage to capture the potential of semantic web data better than any visualization ever could
+    \item The best application for this approach would be a new kind of browser, which realizes ``language as an interface'' for the semantic web
+    \item Derived from language as the main interface, the browser needs to center around the interaction with language and therefore look like a text editor or IDE.
+    \item While showing the merits of the semantic web, the browser should also be ``backwards compatible'' with the traditional world wide web.
 \end{enumerate}
 
-\subsection{Beschreibungsliste}
-\begin{description}
-    \item[LaTeX] Ein Textsatzsystem für wissenschaftliche Dokumente
-    \item[PDF] Portable Document Format
-    \item[UTF-8] Eine Zeichenkodierung für Unicode
-\end{description}
+It is largely based on the following work: \url{https://www.zora.uzh.ch/id/eprint/33194/}
 
-\section{Tabellen}
+\subsection{What is a semantic web browser?}
 
-\begin{table}[h!]
-\centering
-\caption{Beispieltabelle mit deutschen Inhalten}
-\begin{tabular}{|l|c|r|}
-\hline
-\textbf{Name} & \textbf{Alter} & \textbf{Stadt} \\
-\hline
-Anna Müller & 25 & München \\
-Klaus Schmidt & 30 & Berlin \\
-Maria Weber & 22 & Hamburg \\
-\hline
-\end{tabular}
-\label{tab:beispiel}
-\end{table}
+The semantic web has not yet had its ``iPhone''-Moment like AI with ChatGPT. This is because while having a database and backend just like regular WWW apps, semantic apps never figured out their frontend. That's the UI of a semantic web app? How does a browser for the semantic web look like?
 
-Wie in Tabelle \ref{tab:beispiel} zu sehen ist, können Tabellen einfach erstellt und referenziert werden.
+I think the final puzzle piece that many people didn't make was that the semantic web would be controlled by a controlled language like Attempto Controlled English. With it, people could browse the semantic web, control agents, make order, etc.
 
-\section{Zitate und Referenzen}
+A semantic web browser, therefore, would not be visuals-first (which, for our current state of mind is very contra-intuitive) but language-first (see language as an interface), a window into the world of semantic text. The semantic web browser feels therefore much more like a text editor or an IDE than a browser, which in the extension of apps, has become more and more like television, the semantic web browser will feel again much more like an interactive text document.
 
-"`Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt."' -- Ludwig Wittgenstein
+With the semantic web browser, society can make the next step from information society (informationsgesellschaft) to knowledge society (wissensgesellschaft), and maybe, someday, even let the digital behind us for good by controlling the material world through language.
 
-Für wissenschaftliche Arbeiten ist ein ordnungsgemäßes Zitieren unerlässlich.
+\subsection{What would be the benefit of a semantic web browser (and a semantic web) in public administration of finance?}
 
-\section{Fazit}
+People could reference and query data, send mails, etc.
 
-LaTeX ist ein mächtiges Werkzeug für die Erstellung professioneller Dokumente. Mit der richtigen Konfiguration für deutsche Texte lassen sich auch komplexe wissenschaftliche Arbeiten erstellen.
+\subsection{What is the role of LLMs here?}
 
-Weitere Informationen finden Sie in der umfangreichen LaTeX-Dokumentation oder in entsprechenden Büchern zum Thema.
+Agents on the web can be programmed much more deterministically than through LLMs. Of course, LLMs can help generated ACE code. Vibe coding exists here just as on the regular WWW.
+
+\subsection{Why is it necessary?}
+
+Why do we need a semantic web browser? Currently, we see that more and more people speak like LLMs, which means that the text that LLMs train upon, looks more and more similar. At the same time, companies are spending more and more energy on the training of LLMs to make the same language even more powerful. This means a impoverishment of language while at the same time the same semantics are tried to be made more powerful (in a very literal sense) with every more energy.
+
+In practical terms, a language-driven semantic web browser would flip many ways that we interact with the web today. Instead of navigating digital spaces with a certain goal in mind, the user would instead formulate what they want in a pre-defined language and then have the web execute the rest. This means, that user is closer again to achieving what they want from browsing, which they often know beforehand, instead of being confronted with a UI in which they somehow need to figure out how to achieve a goal that they already know. Of course, formulating a goal comes with its own challenges, but here, templates that could be shared between users could be of use here, and potentially, also LLMs.
+
+\subsection{What about traditional WWW?}
+
+Rather than ``semantic web browser'' it should be called ``semantic-first web browser''. The semantic web is an extension of the traditional web, but it could be useful to flip which data is interacted with primarily, because central design choices depend on this: since the best way to interact with the WWW is visually, WWW browsers focus on visuals while the semantic web is best navigated with language, a semantic-first browser should focus on language.
+
+However, while already in browsers, it is possible to interact with semantic web data, it should of course still be possible in semantic-first browsers to interact with traditional web data. And possibly for a very long time (or maybe always for web browsers), this will be necessary, for example if a web service only provides a REST API.
+
+For example, let's consider the users wants to buy new running shoes on Amazon. They could enter a text which references the ontology of Amazon. However, since Amazon requires a sign in, the user would be directed to a sign-in page. After signing in, the prompt's execution would continue, and the credentials would be saved in the semantic browser possibly for later.
+
+In other occasions, the content is just better visualized, so there should be the possibility for websites to still render replies in html.
+
+Problems would quickly arise from interacting with data that is only provided via a REST API. The only solution I can think of here would be either to let the user manually map objects to the current ontology, which would be tedious, or that an LLM would do the same, which would be unreliable.
+
+Generally, of course, it would be the best if more and more web services would also provide a semantic web interface for semantic browsers to interact with them.
+
+\subsection{How would the UI look like?}
+
+Since language is the primary interface, it would look like a text editor or an IDE. Also, it should be possible to reach web services and ontologies from the WWW through import-like statements in ACE.
+
+\subsection{What's the cultural impact?}
+
+In many ways, the semantic browser would stand against the AI-driven browser. And while the AI-driven browser is of course much more user-friendly, the semantic-first web browser would be much more energy efficient, more deterministic and would keep the emancipating aspect of language intact.
+
+Additionally, it stands in contrast to vibe-coding:
+
+\begin{enumerate}
+    \item Instead of ``everything goes'' the parser excepts a given syntax. Therefore, users need to be precise instead of improving the output with blurry prompt-engineer ``rules''.
+    \item It's not expected to have the prompt ready right from the start. Users are invited to spend time crafting and polishing their ``prompts'', before they execute them.
+    \item The prompts are treated more like one whole source code that is optimized over time rather than a history of chat exchanges, which is re-created on every new prompt. Therefore, the UI looks more like an IDE than a chat. The user is creating code that stabilizes incrementally over time rather than having changing/deleting/removing parts of the code by the AI at random, hoping that parts of the code will eventually stabilize because of a lucky prompt.
+\end{enumerate}
+
+The fundamental idea behind all of this is to give users back control on their language, with which they interact with their data as well as the underlying description of whatever they are trying to create/describe or retrieve. Instead of the alchemistic streak that vibe coding has, ACE-coding emphasizes the ``engineering''-aspect of ``prompt-engineering''.
+
+One can observe that the semantic-first browser blurs the line between browsing and coding. In a way, the semantic-first browser integrates the browser's development tools into the browser-experience. Instead of having a rich UI and a small search bar/console, the browser becomes a rich search bar/console with a small visual component. The idea feels similar to how the console and bash scripts are used on Unix systems -- as a power user tool but for the web instead of operating systems.
+
+Through this, of course, the initial threshold becomes much higher. But maybe, these are cultural techniques that need to be educated in a modern knowledge society. Maybe it's fine that certain skills are necessary to interact with technology and that's it not merely about a strong will to do whatever it takes, but requires the aggregation of knowledge, learning of skills and cooperation between individuals. And language is and has always been an important tool here.
+
+\subsection{How would it be technically realized?}
+
+Similar to APE, the parser engine of ACE (attempto controlled English). ACE is converted into prolog and then executed and the result returned.
+
+The tech stack would be traditional semantic web technology, but with controlled natural language as the logic language on top.
+
+(Semantic Web Technology Stack, from \url{https://link.springer.com/chapter/10.1007/978-3-030-64619-6_2})
+
+\subsection{Does it make LLMs completely obsolete? Introducing the precision controller.}
+
+Is the semantic web browser a complete counterproposal to ChatGPT and LLMs in general -- no. The idea is that LLMs could be used to translate between different web paradigms (semantic-, AI- and REST-based), because pattern-recognition is what LLMs can do best.
+
+Using a latch, users could specify how ``sharp'' the rules of the user's ontology are being propagated over the data that it finds on the semantic web. With a very low degree of ``sharpness'', the semantic web browser makes no use of LLMs and allows no deviation from the ontology and basically can only be used for semantic web data that fits the current ontology. With higher degrees, LLMs are used to access more data and access wider parts of the web, with the disadvantage of potential hallucinations, unexpected and wrong behaviour. Of course, this feature should be applied very carefully; however, if used sparingly, it could solve the current problem of mismatching ontologies and web paradigms that prevent a semantic web browser. In a way, a latch with a full degree of blurriness would actually simulate the MCP-protocol by Anthropic, in the sense that you have still the requirements by the controlled natural language, but the semantic web server would basically freely act, just like the MCP-Protocol does.
+
+So, with the precision controller, the semantic web server actually can be turned into a ChatGPT from a different direction but also toned down again to a tool of sharp reasoning and precise and deterministic control of semantic web data.
+
+One could also think about whether this precision controller could also be applied on the strictness that the ACE syntax is applied. With a higher degree of blurriness, even loosely formulated statements are accepted and then the ontology is also more loosely applied. This could also depend on how much energy the application should currently consume.
+
+\subsection{AI Explainability}
+
+Basically, with an app like ChatGPT, you have before you a black box that you can send commands to and that gives you unpredictable answers and consumes huge amounts of energy.
+
+Instead, the semantc web browser with the precision controller starts with a complete white box, where you can control the ontology, have full control of the language, the outcome and consumes much less energy; but you can move on the ratio towards a ChatGPT-like black box with the precision controller.
+
+With the default level, the ACE-syntax is enforced very strictly and semantic web data is expected to have the same syntax as defined. With a lower precision level, an LLM is stuck inbetween, syntax is not enforced as strictly and the ontology is enforced even if the data does not match it, also propagating to other web pradigms like MCP/AI-web and traditional web-services with REST-APIs.
+
+The precision controller basically let's the user move between a very strict semantic web browser and the lose cannon of a ChatGPT+MCP-app. And I think this moving of ratio is only possible if you start developing a strict semantic web browser, which has a precision controller integrated.
+
+Another merit is that the energy consumption can be adjusted at will. If money/energy is low, for example in a state's administration, the semantic web browser can still be used, while ChatGPT-like apps become unfeasible.
+
+Everything else about the idea has already been implemented (e.g. see \url{https://www.cognitum.eu/semantics/fluenteditor/}); the new thing would be the precision controller, because LLMs haven't been around this long (and the real world is often not sufficient to model it with pure logical expressions) and combined with controlled natural languages like this. In an abstract sense, ChatGPT can already been thought of as a semantic web browser, as well as implementations like fluenteditor; however, while the former consumes too many resources (the hallucinations can probably be fixed), the later assumes a world that can be modelled with ontologies that does not exist and will always fall short of reality. The semantic web browser proposed in this paper could bridge this gap and create an application, that let's user browse the semantic web in a mature (``mündig'') way.
+
+\subsection{Conclusion -- A web interface, which can be adapted to the available resources and give back control to the user}
+
+What about this paper is new? Basically, everything introduced here was already tried out before. However, the approach has not yet been implemented consequently in one product (that is a browser) and combined with LLMs in a productive way, as well as has been reduced in the past mainly to English:
+\begin{itemize}
+    \item Implementing ACE as an interface for the semantic web in a browser that has language as the primary interface has not been done before
+    \item German as main language has received little research until now
+    \item Using LLMs as translation-tools between AI/MCP web and traditional/REST web that can be applied to variating degrees (precision-controller) is new
+\end{itemize}
+
+The primary advantages of these approaches would be:
+\begin{itemize}
+    \item Lesser energy consumption than pure LLM approach
+    \item Higher precision/determinism than LLM approach
+    \item Could work against impoverishment of language: by separating ``social'' language from technical language, it could contribute to keeping the social aspects of language intact while giving people a better tool to collaborate in their technical endeavours.
+    \item With the Precision-controller the advantages of ChatGPT-like applications can be applied when the risks are accepted, and the resources (money/energy) are available
+    \item LLMs could offer a translation between different web-paradigms
+\end{itemize}
+
+In this sense, this paper introduces an implementation of a semantic web browser (with an interface based on natural controlled language and a precision controller based on LLMs) that flips the current approach to AI-based applications on its head by expecting a higher formality from the user input, but could contribute to a wider adoption of the semantic web, give more control back to the user and keep the emancipatory aspect of language intact. At the same time, the precision controller could enable a backwards compatibility with other web paradigms and keep the advantages of current ChatGPT-like applications if the user is willing to take the risks associated with this and is conscious about the energy-consumption of it.
+
+\newpage
+
+\section{Controlled-Forward-Propagation as a new mechanism for implementing a web-paradigm-agnostic semantic-web-browser}
+
+\subsection{Abstract}
+
+The current WWW is fragmented. Applications that allow the user to browse (or more broader speaking: explore) the semantic web fall short when it comes to overcoming the mismatch with other web paradigms (agentic/MCP web, social/ActivityPub/AT web or traditional WWW/REST web), as well as with data from other web paradigms like SQL. This paper introduces a novel mechanism to overcome this protocol/data mismatch by basically applying the user's ontology to new data/web interfaces using LLMs. LLMs are here not used for immediate translation of data/queries but are just used to generate the transformators, which are deterministic code, which is then used to transform the data. Therefore, it is also possible to check the generated transformator with the user and then use it to forward the request/process the data.
+
+The innovation here would be to combine Neuro Symbolic AI with ACE to achieve a language-based interface (controlled natural language as an interface), expand on the ``Neural | Symbolic''-AI-approach with the controlled forward propagation mechanism to overcome the limitations of the mismatch between different web paradigms without losing the semantic-web-defining precision and determinism (paradigm agnostic but deterministic), and to build a IDE-like semantic web browser from it all.
+
+\subsection{Principle}
+
+The CFP-mechanism works by accepting a semantic web and facts as well as some sample data or interface specification, and returns a transformator-program, which can then be used to bridge the data/between the different web interfaces. It is depicted in the following figure:
+
+The term Social Web here does not mean only mean decentralized social media networks based on ActivityPub and AT but also all centralized social media platforms.
+
+\subsection{Implementation At the example of REST-based web-services}
+
+CFP is used to bridge between semantic web representations like RDF (potentially displayed using controlled natural language like ACE) and other web paradigms using LLMs. It outputs a mapping in XML, which is then used by the transformator-program to apply the translation on the given data/query.
+
+Because of the transparency of XML, the user is able to check the result of the LLM and accept/decline or make modifications to it. After this step, everything should be deterministic again. The LLM is only used for the generation of the mapping.
+
+Of course, there could be different options for the user, which immediately accept everything the LLM generated without checking back with the user, however, this would come with the risk of hallucinations and therefore unexpected, false and even dangerous behaviour.
+
+\subsection{CFP Example for a REST-based web service}
+
+In the following, I want to demonstrate the principle with an example of a given RDF specification, an SPARQL-query and an OpenAPI-specification. CFP will be used to generate an XML-mapping, which is then fed into the transformator-program to translate the query and apply it to the REST-API and translate the result to RDF to display it to the user.
+
+This example demonstrates the complete CFP workflow from user ontology to final query results.
+
+Summary of CFP Process:
+\begin{enumerate}
+    \item LLM Input: User ontology + SPARQL query + OpenAPI spec
+    \item LLM Output: XML mapping specification
+    \item User Review: Validates/modifies XML mapping
+    \item Fixed Engine: Processes XML mapping to:
+    \begin{itemize}
+        \item Translate SPARQL filters to REST parameters
+        \item Execute REST API call
+        \item Transform JSON response to RDF using mapping rules
+        \item Execute original SPARQL on transformed RDF
+    \end{itemize}
+    \item Result: Semantic query results from REST data
+\end{enumerate}
+
+\subsection{Conclusion}
+
+CFP builds on existing approaches to bridge the gap between different web paradigms for implementing a protocol-agnostic semantic web browser. It could be used to implement a language-interface-based semantic web browser, with which user could have access to various data sources and query much of the web's data without relying solely on LLMs, which have a high-energy consumption and are unreliable and instead building on controlled natural language and using LLMs solely for the mapping between different web paradigms if necessary, and in such a manner that it can always be second-checked by the end-user.
 
 \end{document}
