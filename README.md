@@ -6,5 +6,6 @@ Then execute:
 
 ```bash
 pdflatex -output-directory=out main.tex
+biber -output-directory=out main
 pdflatex -output-directory=out main.tex
 ```
