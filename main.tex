@@ -33,7 +33,31 @@
 \tableofcontents
 \newpage
 
+\subsection*{Abstract}
+
+The fundamental idea of this paper is for ChatGPT-like apps to lose natural language for less energy consumption and more determinism in their answers based on controlled natural languages like ACE; for the user to be able to modify this trade-off-ratio at will based on LLMs (which is not possible when starting from a ChatGPT-like app); and to capture this new paradigm in a new type of browser that has natural language as its primary interface, here called a semantic web-first browser.
+
+The basic assumption of this paper is that the main reason why the semantic web has not had a break-through yet is, because its merits have not yet found its way to the end user, because there has not yet an interface been found to interact with the semantic web in a meaningful way that appeals to the masses. In this paper, controlled natural language is introduced as a main way to interact with the semantic web and based on this observation, the architecture for a semantic-first web browser is proposed.
+
+The five main points this paper makes are:
+
+\begin{enumerate}
+    \item There has not yet been found a sufficient interface for the semantic web to be appealing to end-users and reach wider adoption
+    \item Controlled natural language like ACE could serve well as a main interface for semantic data, because they manage to capture the potential of semantic web data better than any visualization ever could
+    \item The best application for this approach would be a new kind of browser, which realizes ``language as an interface'' for the semantic web
+    \item Derived from language as the main interface, the browser needs to center around the interaction with language and therefore look like a text editor or IDE.
+    \item While showing the merits of the semantic web, the browser should also be ``backwards compatible'' with the traditional world wide web.
+\end{enumerate}
+
+It is largely based on the following work: \url{https://www.zora.uzh.ch/id/eprint/33194/}
+
+In the second part, domain discovery based on LLMs is proposed to make the browser web-paradigm agnostic.
+
 \section{Introduction}
+
+``The Semantic Web is an extension of the Web where information is represented in a machine-process able way. Users can access the information on the Semantic Web using a Web browser such as Explorer or Safari. However, since the information is typically represented in RDF (Resource Description Framework), it is not always easy to understand what the information means. While existing Semantic Web browsers can help users understand the information on the Semantic Web, users need to have some knowledge on RDF and XML which is a base representation format for RDF.''
+
+From ``A Semantic Web Browser for Novice Users'' by Younghwan Kim; Sujin Yoo; Seongbin Park
 
 This text is a description of a next level SemanticWebBrowser, which tries to achieve various properties of semantic web applications in one app with a focus on semantic web data and technology. However, the problem here is that the current web is fragmented and there needs to be a mechanism to bridge the gap here. For this, controlled forward propagation is introduced as a potential solution:
 
@@ -49,30 +73,7 @@ Its a combination of three main idea, which have all been explored before but no
 
 \section{A CLI for the WWW, or: finding an interface for a semantic web browser that is useable}
 
-\subsection{Introduction}
-
-``The Semantic Web is an extension of the Web where information is represented in a machine-process able way. Users can access the information on the Semantic Web using a Web browser such as Explorer or Safari. However, since the information is typically represented in RDF (Resource Description Framework), it is not always easy to understand what the information means. While existing Semantic Web browsers can help users understand the information on the Semantic Web, users need to have some knowledge on RDF and XML which is a base representation format for RDF.''
-
-From ``A Semantic Web Browser for Novice Users'' by Younghwan Kim; Sujin Yoo; Seongbin Park
-
-\subsection{Abstract}
-
-The fundamental idea of this paper is for ChatGPT-like apps to lose natural language for less energy consumption and more determinism in their answers based on controlled natural languages like ACE; for the user to be able to modify this trade-off-ratio at will based on LLMs (which is not possible when starting from a ChatGPT-like app); and to capture this new paradigm in a new type of browser that has natural language as its primary interface, here called a semantic web-first browser.
-
-The basic assumption of this paper is that the main reason why the semantic web has not had a break-through yet is, because its merits have not yet found its way to the end user, because there has not yet an interface been found to interact with the semantic web in a meaningful way that appeals to the masses. In this paper, controlled natural language is introduced as a main way to interact with the semantic web and based on this observation, the architecture for a semantic-first web browser is proposed.
-
-The five main points this paper makes are:
-\begin{enumerate}
-    \item There has not yet been found a sufficient interface for the semantic web to be appealing to end-users and reach wider adoption
-    \item Controlled natural language like ACE could serve well as a main interface for semantic data, because they manage to capture the potential of semantic web data better than any visualization ever could
-    \item The best application for this approach would be a new kind of browser, which realizes ``language as an interface'' for the semantic web
-    \item Derived from language as the main interface, the browser needs to center around the interaction with language and therefore look like a text editor or IDE.
-    \item While showing the merits of the semantic web, the browser should also be ``backwards compatible'' with the traditional world wide web.
-\end{enumerate}
-
-It is largely based on the following work: \url{https://www.zora.uzh.ch/id/eprint/33194/}
-
-\subsection{What is a semantic web browser?}
+\subsection{Introduction - What is a semantic web browser?}
 
 The semantic web has not yet had its ``iPhone''-Moment like AI with ChatGPT. This is because while having a database and backend just like regular WWW apps, semantic apps never figured out their frontend. That's the UI of a semantic web app? How does a browser for the semantic web look like?
 
@@ -188,7 +189,7 @@ In this sense, this paper introduces an implementation of a semantic web browser
 
 \section{Controlled-Forward-Propagation as a new mechanism for implementing a web-paradigm-agnostic semantic-web-browser}
 
-\subsection{Abstract}
+\subsection{Introduction - What is Domain-Discovery?}
 
 The current WWW is fragmented. Applications that allow the user to browse (or more broader speaking: explore) the semantic web fall short when it comes to overcoming the mismatch with other web paradigms (agentic/MCP web, social/ActivityPub/AT web or traditional WWW/REST web), as well as with data from other web paradigms like SQL. This paper introduces a novel mechanism to overcome this protocol/data mismatch by basically applying the user's ontology to new data/web interfaces using LLMs. LLMs are here not used for immediate translation of data/queries but are just used to generate the transformators, which are deterministic code, which is then used to transform the data. Therefore, it is also possible to check the generated transformator with the user and then use it to forward the request/process the data.
 
