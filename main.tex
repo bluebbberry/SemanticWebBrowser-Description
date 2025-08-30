@@ -13,6 +13,8 @@
 \usepackage[backend=biber]{biblatex}
 \addbibresource{main.bib}
 
+\graphicspath{ {./figures/} }
+
 % Page layout
 \geometry{margin=2.5cm}
 \pagestyle{fancy}
@@ -78,6 +80,32 @@ I think the final puzzle piece that many people didn't make was that the semanti
 A semantic web browser, therefore, would not be visuals-first (which, for our current state of mind is very contra-intuitive) but language-first (see language as an interface), a window into the world of semantic text. The semantic web browser feels therefore much more like a text editor or an IDE than a browser, which in the extension of apps, has become more and more like television, the semantic web browser will feel again much more like an interactive text document.
 
 With the semantic web browser, society can make the next step from information society (informationsgesellschaft) to knowledge society (wissensgesellschaft), and maybe, someday, even let the digital behind us for good by controlling the material world through language.
+
+\subsection{Terms}
+
+The paper differentiates four main web paradigms: etc.
+
+\subsection{Architecture}
+
+There are basically three main stages:
+
+\begin{enumerate}
+    \item AceCode: AceCode editor with the possibility to upload from simple external data sources like a CSV or SQL file but no semantic web integration
+    \item SemanticWebBrowser: Possibility to also reference semantic web data
+    \item Web-Paradigm-Agnosticism SemanticWebBrowser: Possibility to reference sources from different web paradigms (social web, agentic, traditional web)
+\end{enumerate}
+
+\begin{figure}[h]
+\includegraphics[width=16cm]{semantic_web_browser_first_stage_architecture}
+\end{figure}
+
+\subsection{User-Interface}
+
+The user interface could look like the following:
+
+\begin{figure}[h]
+\includegraphics[width=16cm]{ui_mock}
+\end{figure}
 
 \subsection{What would be the benefit of a semantic web browser (and a semantic web) in public administration of finance?}
 
