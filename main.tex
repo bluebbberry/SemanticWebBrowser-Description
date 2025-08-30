@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage[table]{xcolor}
 \usepackage{fancyhdr}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{main.bib}
@@ -101,13 +102,13 @@ An overview can be seen in the following table:
     \centering
     \begin{tabular}{|l|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
     \hline
-     & Energy-Efficient, Deterministic & IDE-Like, Language-Interface-based & SemanticWeb-Support & Web-Paradigm-Agnostic based on ML \\
+     & Energy-Efficient, Deterministic & IDE-Like, Language-Interface-based & Web-Paradigm-Agnostic based on ML & SemanticWeb-Support \\
     \hline
-    AceCode & Yes & Yes & No & Semi-Yes \\
+    AceCode & \cellcolor{green} Yes & \cellcolor{green} Yes & \cellcolor{yellow} Semi-Yes & \cellcolor{red!25} No \\
     \hline
-    SemanticWebBrowser (SWB) & Yes & Yes & Yes & Semi-Yes \\
+    SemanticWebBrowser (SWB) & \cellcolor{green} Yes & \cellcolor{green} Yes & \cellcolor{yellow}Semi-Yes & \cellcolor{green}Yes \\
     \hline
-    Web-Paradigm-Agnostic SWB & Semi-Yes & Yes & Yes & Yes \\
+    Web-Paradigm-Agnostic SWB & \cellcolor{yellow} Semi-Yes & \cellcolor{green}Yes & \cellcolor{green}Yes & \cellcolor{green}Yes \\
     \hline
     \end{tabular}
     \caption{Feature comparison table}
