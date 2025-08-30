@@ -85,7 +85,7 @@ With the semantic web browser, society can make the next step from information s
 
 The paper differentiates four main web paradigms: etc.
 
-\subsection{Architecture}
+\subsection{Behaviour}
 
 There are basically three main stages:
 
@@ -95,8 +95,29 @@ There are basically three main stages:
     \item Web-Paradigm-Agnosticism SemanticWebBrowser: Possibility to reference sources from different web paradigms (social web, agentic, traditional web)
 \end{enumerate}
 
+An overview can be seen in the following table:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+    \hline
+     & Energy-Efficient, Deterministic & IDE-Like, Language-Interface-based & SemanticWeb-Support & Web-Paradigm-Agnostic based on ML \\
+    \hline
+    AceCode & Yes & Yes & No & Semi-Yes \\
+    \hline
+    SemanticWebBrowser (SWB) & Yes & Yes & Yes & Semi-Yes \\
+    \hline
+    Web-Paradigm-Agnostic SWB & Semi-Yes & Yes & Yes & Yes \\
+    \hline
+    \end{tabular}
+    \caption{Feature comparison table}
+    \label{tab:features}
+\end{table}
+
+And a visual representation of the behaviour of AceCode can be seen in the following figure:
+
 \begin{figure}[h]
-\includegraphics[width=16cm]{semantic_web_browser_first_stage_architecture}
+\includegraphics[width=16cm]{ace_code_state_diagram}
 \end{figure}
 
 \subsection{User-Interface}
