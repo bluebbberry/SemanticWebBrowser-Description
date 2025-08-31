@@ -55,7 +55,11 @@ The five main points this paper makes are:
     \item While showing the merits of the semantic web, the browser should also be ``backwards compatible'' with the traditional world wide web.
 \end{enumerate}
 
-It is largely based on the following work: \cite{semanticWebAce}. In the second part, domain discovery based on LLMs is proposed to make the browser web-paradigm agnostic.
+It is largely based on the following work: \cite{semanticWebAce}.
+
+The paper first describes the philosophical reasoning that lead to the idea.
+Afterwards the four different implementation-stages of the SemanticWebBrowser are described.
+The paper finishes with a conclusion.
 
 \section{Introduction - A CLI for the WWW, or: finding an interface for a semantic web browser that is useable}
 
@@ -314,6 +318,8 @@ The current WWW is fragmented. Applications that allow the user to browse (or mo
 The innovation here would be to combine Neuro Symbolic AI with ACE to achieve a language-based interface (controlled natural language as an interface), expand on the ``Neural | Symbolic''-AI-approach with the controlled forward propagation mechanism to overcome the limitations of the mismatch between different web paradigms without losing the semantic-web-defining precision and determinism (paradigm agnostic but deterministic), and to build a IDE-like semantic web browser from it all.
 
 \subsection{Principle}
+
+In the following, domain discovery as well as different Schema-Mapping-Strategies based on LLMs are proposed to make the browser web-paradigm agnostic as well as compatible to other semantic ontologies.
 
 The CFP-mechanism works by accepting a semantic web and facts as well as some sample data or interface specification, and returns a transformator-program, which can then be used to bridge the data/between the different web interfaces. It is depicted in the following figure:
 
