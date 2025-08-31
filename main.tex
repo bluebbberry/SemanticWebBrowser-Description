@@ -303,6 +303,8 @@ In the following section, domain discovery is tried to be implemented in a way t
 The mechanism of domain discovery with the help of LLMs is in the following called Controlled-Forward-Propagation.
 It was intended as a new mechanism for implementing a web-paradigm-agnostic semantic-web-browser, but is actually just domain discovery and an area of research for years.
 
+Another approach is called wrapper generation (in the data mining context), which is used to scrape data from the web and turn it into relational form (first order logic).
+
 \subsection{Introduction - What is Domain-Discovery?}
 
 The current WWW is fragmented. Applications that allow the user to browse (or more broader speaking: explore) the semantic web fall short when it comes to overcoming the mismatch with other web paradigms (agentic/MCP web, social/ActivityPub/AT web or traditional WWW/REST web), as well as with data from other web paradigms like SQL. This paper introduces a novel mechanism to overcome this protocol/data mismatch by basically applying the user's ontology to new data/web interfaces using LLMs. LLMs are here not used for immediate translation of data/queries but are just used to generate the transformators, which are deterministic code, which is then used to transform the data. Therefore, it is also possible to check the generated transformator with the user and then use it to forward the request/process the data.
