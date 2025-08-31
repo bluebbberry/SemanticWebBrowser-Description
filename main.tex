@@ -56,7 +56,7 @@ It is largely based on the following work: \url{https://www.zora.uzh.ch/id/eprin
 
 In the second part, domain discovery based on LLMs is proposed to make the browser web-paradigm agnostic.
 
-\section{Introduction}
+\section{Introduction - A CLI for the WWW, or: finding an interface for a semantic web browser that is useable}
 
 This text is a description of a next level SemanticWebBrowser, which tries to achieve various properties of semantic web applications in one app with a focus on semantic web data and technology. However, the problem here is that the current web is fragmented and there needs to be a mechanism to bridge the gap here. For this, controlled forward propagation is introduced as a potential solution:
 
@@ -70,9 +70,7 @@ Its a combination of three main idea, which have all been explored before but no
     \item Using LLMs to achieve web-paradigm agnostic semantic queries without losing determinism and semantic precision, and stay energy-efficient to a reasonable degree; both for input data and communication with external interfaces (see: \cite{llmAsDataTranslator}, \cite{llmForIntegratingHeterogenousData}, \cite{neuroSymbolicAi}, \cite{domainDiscoveryTool}, \cite{schemaInference})
 \end{itemize}
 
-\section{A CLI for the WWW, or: finding an interface for a semantic web browser that is useable}
-
-\subsection{Introduction - What is a semantic web browser?}
+\section{Paper-Overview}
 
 The semantic web has not yet had its ``iPhone''-Moment like AI with ChatGPT. This is because while having a database and backend just like regular WWW apps, semantic apps never figured out their frontend. That's the UI of a semantic web app? How does a browser for the semantic web look like?
 
@@ -82,33 +80,12 @@ A semantic web browser, therefore, would not be visuals-first (which, for our cu
 
 With the semantic web browser, society can make the next step from information society (informationsgesellschaft) to knowledge society (wissensgesellschaft), and maybe, someday, even let the digital behind us for good by controlling the material world through language.
 
-\subsection{Terms}
-
-The paper differentiates four main web paradigms:
-
-\begin{figure}[h]
-    \includegraphics[width=16cm]{different_web_paradigm}
-\end{figure}
-
-The term social web also includes all commercial social media platforms like Threads or X, which by now also feature bots with which one can interact with and in a way, browse other web paradigms.
-The same is true for apps like ChatGPT, which in a way, allows to browse the traditional web, semantic and social web, because it either used much of this data for training, or, because it actually gets data on demand.
-
-TODO: Do some research if there are some references
-
-\subsection{Potential Predecessor: Pocket-Inferer (Taschenfolgerer)}
-
-As a potential predecessor, a simple ACE-based logical inferer could be implemeted, which when enabling a Programming-Mode, changes to AceCode.
-
-\begin{figure}[h]
-    \includegraphics[width=16cm]{taschenfolgerer}
-    \caption{Pocket-Inferer (Taschenfolgerer)}
-\end{figure}
-
-\subsection{Behaviour and Architecture}
+\subsection{What is a semantic web browser? Or: the four different development stages}
 
 There are basically three main stages:
 
 \begin{enumerate}
+    \item PocketInferer: Program for logical inference based on ACE
     \item AceCode: AceCode editor with the possibility to upload from simple external data sources like a CSV or SQL file but no semantic web integration
     \item SemanticWebBrowser: Possibility to also reference semantic web data
     \item Web-Paradigm-Agnosticism SemanticWebBrowser: Possibility to reference sources from different web paradigms (social web, agentic, traditional web)
@@ -146,6 +123,34 @@ An overview can be seen in the following table:
     \caption{Feature comparison table of browsers from different web paradigms}
     \label{tab:features}
 \end{table}
+
+\subsection{Terms}
+
+The paper differentiates four main web paradigms:
+
+\begin{figure}[h]
+    \includegraphics[width=16cm]{different_web_paradigm}
+\end{figure}
+
+The term social web also includes all commercial social media platforms like Threads or X, which by now also feature bots with which one can interact with and in a way, browse other web paradigms.
+The same is true for apps like ChatGPT, which in a way, allows to browse the traditional web, semantic and social web, because it either used much of this data for training, or, because it actually gets data on demand.
+
+TODO: Do some research if there are some references
+
+\section{Pocket-Inferer (potential Predecessor, german: Taschenfolgerer)}
+
+As a potential predecessor, a simple ACE-based logical inferer could be implemeted, which when enabling a Programming-Mode, changes to AceCode.
+
+\begin{figure}[h]
+    \includegraphics[width=16cm]{taschenfolgerer}
+    \caption{Pocket-Inferer (Taschenfolgerer)}
+\end{figure}
+
+\section{AceCode (IDE for logical inference based on ACE)}
+
+The following sections describe the next step: an IDE for logical reference based on ACE.
+
+\subsection{Behaviour and Architecture}
 
 And a visual representation of the behaviour of AceCode can be seen in the following figure:
 
@@ -192,6 +197,10 @@ A first implementation of the first stage of the SemanticWebBrowser can be seen 
 \begin{figure}[h]
     \includegraphics[width=16cm]{ace_code_screenshot_4}
 \end{figure}
+
+\section{SemanticWebBrowser Implementation from AceCode}
+
+In the following section, the integration of the semantic web into AceCode is described.
 
 \subsection{What would be the benefit of a semantic web browser (and a semantic web) in public administration of finance?}
 
@@ -287,7 +296,11 @@ Everything else about the idea has already been implemented (e.g. see \url{https
 
 \newpage
 
-\section{Controlled-Forward-Propagation as a new mechanism for implementing a web-paradigm-agnostic semantic-web-browser}
+\section{Web-Paradigm-Agnostic SemanticWebBrowser}
+
+In the following section, domain discovery is tried to be implemented in a way to make the SemanticWebBrowser web-paradigm-agnostic.
+The mechanism of domain discovery with the help of LLMs is in the following called Controlled-Forward-Propagation.
+It was intended as a new mechanism for implementing a web-paradigm-agnostic semantic-web-browser, but is actually just domain discovery and an area of research for years.
 
 \subsection{Introduction - What is Domain-Discovery?}
 
