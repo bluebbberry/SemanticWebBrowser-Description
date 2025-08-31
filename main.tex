@@ -70,7 +70,7 @@ Its a combination of three main idea, which have all been explored before but no
     \item Using LLMs to achieve web-paradigm agnostic semantic queries without losing determinism and semantic precision, and stay energy-efficient to a reasonable degree; both for input data and communication with external interfaces (see: \cite{llmAsDataTranslator}, \cite{llmForIntegratingHeterogenousData}, \cite{neuroSymbolicAi}, \cite{domainDiscoveryTool}, \cite{schemaInference})
 \end{itemize}
 
-\section{Paper-Overview}
+\section{Paper-Overview and philosphical derivation for idea}
 
 The semantic web has not yet had its ``iPhone''-Moment like AI with ChatGPT. This is because while having a database and backend just like regular WWW apps, semantic apps never figured out their frontend. That's the UI of a semantic web app? How does a browser for the semantic web look like?
 
@@ -137,6 +137,56 @@ The same is true for apps like ChatGPT, which in a way, allows to browse the tra
 
 TODO: Do some research if there are some references
 
+\subsection{What would be the benefit of a semantic web browser (and a semantic web) in public administration of finance?}
+
+People could reference and query data, send mails, etc.
+
+\subsection{What is the role of LLMs here?}
+
+Agents on the web can be programmed much more deterministically than through LLMs. Of course, LLMs can help generated ACE code. Vibe coding exists here just as on the regular WWW.
+
+\subsection{Why is it necessary?}
+
+Why do we need a semantic web browser? Currently, we see that more and more people speak like LLMs, which means that the text that LLMs train upon, looks more and more similar. At the same time, companies are spending more and more energy on the training of LLMs to make the same language even more powerful. This means a impoverishment of language while at the same time the same semantics are tried to be made more powerful (in a very literal sense) with every more energy.
+
+In practical terms, a language-driven semantic web browser would flip many ways that we interact with the web today. Instead of navigating digital spaces with a certain goal in mind, the user would instead formulate what they want in a pre-defined language and then have the web execute the rest. This means, that user is closer again to achieving what they want from browsing, which they often know beforehand, instead of being confronted with a UI in which they somehow need to figure out how to achieve a goal that they already know. Of course, formulating a goal comes with its own challenges, but here, templates that could be shared between users could be of use here, and potentially, also LLMs.
+
+\subsection{What about traditional WWW?}
+
+Rather than ``semantic web browser'' it should be called ``semantic-first web browser''. The semantic web is an extension of the traditional web, but it could be useful to flip which data is interacted with primarily, because central design choices depend on this: since the best way to interact with the WWW is visually, WWW browsers focus on visuals while the semantic web is best navigated with language, a semantic-first browser should focus on language.
+
+However, while already in browsers, it is possible to interact with semantic web data, it should of course still be possible in semantic-first browsers to interact with traditional web data. And possibly for a very long time (or maybe always for web browsers), this will be necessary, for example if a web service only provides a REST API.
+
+For example, let's consider the users wants to buy new running shoes on Amazon. They could enter a text which references the ontology of Amazon. However, since Amazon requires a sign in, the user would be directed to a sign-in page. After signing in, the prompt's execution would continue, and the credentials would be saved in the semantic browser possibly for later.
+
+In other occasions, the content is just better visualized, so there should be the possibility for websites to still render replies in html.
+
+Problems would quickly arise from interacting with data that is only provided via a REST API. The only solution I can think of here would be either to let the user manually map objects to the current ontology, which would be tedious, or that an LLM would do the same, which would be unreliable.
+
+Generally, of course, it would be the best if more and more web services would also provide a semantic web interface for semantic browsers to interact with them.
+
+\subsection{How would the UI look like?}
+
+Since language is the primary interface, it would look like a text editor or an IDE. Also, it should be possible to reach web services and ontologies from the WWW through import-like statements in ACE.
+
+\subsection{What's the cultural impact?}
+
+In many ways, the semantic browser would stand against the AI-driven browser. And while the AI-driven browser is of course much more user-friendly, the semantic-first web browser would be much more energy efficient, more deterministic and would keep the emancipating aspect of language intact.
+
+Additionally, it stands in contrast to vibe-coding:
+
+\begin{enumerate}
+    \item Instead of ``everything goes'' the parser excepts a given syntax. Therefore, users need to be precise instead of improving the output with blurry prompt-engineer ``rules''.
+    \item It's not expected to have the prompt ready right from the start. Users are invited to spend time crafting and polishing their ``prompts'', before they execute them.
+    \item The prompts are treated more like one whole source code that is optimized over time rather than a history of chat exchanges, which is re-created on every new prompt. Therefore, the UI looks more like an IDE than a chat. The user is creating code that stabilizes incrementally over time rather than having changing/deleting/removing parts of the code by the AI at random, hoping that parts of the code will eventually stabilize because of a lucky prompt.
+\end{enumerate}
+
+The fundamental idea behind all of this is to give users back control on their language, with which they interact with their data as well as the underlying description of whatever they are trying to create/describe or retrieve. Instead of the alchemistic streak that vibe coding has, ACE-coding emphasizes the ``engineering''-aspect of ``prompt-engineering''.
+
+One can observe that the semantic-first browser blurs the line between browsing and coding. In a way, the semantic-first browser integrates the browser's development tools into the browser-experience. Instead of having a rich UI and a small search bar/console, the browser becomes a rich search bar/console with a small visual component. The idea feels similar to how the console and bash scripts are used on Unix systems -- as a power user tool but for the web instead of operating systems.
+
+Through this, of course, the initial threshold becomes much higher. But maybe, these are cultural techniques that need to be educated in a modern knowledge society. Maybe it's fine that certain skills are necessary to interact with technology and that's it not merely about a strong will to do whatever it takes, but requires the aggregation of knowledge, learning of skills and cooperation between individuals. And language is and has always been an important tool here.
+
 \section{Pocket-Inferer (potential Predecessor, german: Taschenfolgerer)}
 
 As a potential predecessor, a simple ACE-based logical inferer could be implemeted, which when enabling a Programming-Mode, changes to AceCode.
@@ -201,56 +251,6 @@ A first implementation of the first stage of the SemanticWebBrowser can be seen 
 \section{SemanticWebBrowser Implementation from AceCode}
 
 In the following section, the integration of the semantic web into AceCode is described.
-
-\subsection{What would be the benefit of a semantic web browser (and a semantic web) in public administration of finance?}
-
-People could reference and query data, send mails, etc.
-
-\subsection{What is the role of LLMs here?}
-
-Agents on the web can be programmed much more deterministically than through LLMs. Of course, LLMs can help generated ACE code. Vibe coding exists here just as on the regular WWW.
-
-\subsection{Why is it necessary?}
-
-Why do we need a semantic web browser? Currently, we see that more and more people speak like LLMs, which means that the text that LLMs train upon, looks more and more similar. At the same time, companies are spending more and more energy on the training of LLMs to make the same language even more powerful. This means a impoverishment of language while at the same time the same semantics are tried to be made more powerful (in a very literal sense) with every more energy.
-
-In practical terms, a language-driven semantic web browser would flip many ways that we interact with the web today. Instead of navigating digital spaces with a certain goal in mind, the user would instead formulate what they want in a pre-defined language and then have the web execute the rest. This means, that user is closer again to achieving what they want from browsing, which they often know beforehand, instead of being confronted with a UI in which they somehow need to figure out how to achieve a goal that they already know. Of course, formulating a goal comes with its own challenges, but here, templates that could be shared between users could be of use here, and potentially, also LLMs.
-
-\subsection{What about traditional WWW?}
-
-Rather than ``semantic web browser'' it should be called ``semantic-first web browser''. The semantic web is an extension of the traditional web, but it could be useful to flip which data is interacted with primarily, because central design choices depend on this: since the best way to interact with the WWW is visually, WWW browsers focus on visuals while the semantic web is best navigated with language, a semantic-first browser should focus on language.
-
-However, while already in browsers, it is possible to interact with semantic web data, it should of course still be possible in semantic-first browsers to interact with traditional web data. And possibly for a very long time (or maybe always for web browsers), this will be necessary, for example if a web service only provides a REST API.
-
-For example, let's consider the users wants to buy new running shoes on Amazon. They could enter a text which references the ontology of Amazon. However, since Amazon requires a sign in, the user would be directed to a sign-in page. After signing in, the prompt's execution would continue, and the credentials would be saved in the semantic browser possibly for later.
-
-In other occasions, the content is just better visualized, so there should be the possibility for websites to still render replies in html.
-
-Problems would quickly arise from interacting with data that is only provided via a REST API. The only solution I can think of here would be either to let the user manually map objects to the current ontology, which would be tedious, or that an LLM would do the same, which would be unreliable.
-
-Generally, of course, it would be the best if more and more web services would also provide a semantic web interface for semantic browsers to interact with them.
-
-\subsection{How would the UI look like?}
-
-Since language is the primary interface, it would look like a text editor or an IDE. Also, it should be possible to reach web services and ontologies from the WWW through import-like statements in ACE.
-
-\subsection{What's the cultural impact?}
-
-In many ways, the semantic browser would stand against the AI-driven browser. And while the AI-driven browser is of course much more user-friendly, the semantic-first web browser would be much more energy efficient, more deterministic and would keep the emancipating aspect of language intact.
-
-Additionally, it stands in contrast to vibe-coding:
-
-\begin{enumerate}
-    \item Instead of ``everything goes'' the parser excepts a given syntax. Therefore, users need to be precise instead of improving the output with blurry prompt-engineer ``rules''.
-    \item It's not expected to have the prompt ready right from the start. Users are invited to spend time crafting and polishing their ``prompts'', before they execute them.
-    \item The prompts are treated more like one whole source code that is optimized over time rather than a history of chat exchanges, which is re-created on every new prompt. Therefore, the UI looks more like an IDE than a chat. The user is creating code that stabilizes incrementally over time rather than having changing/deleting/removing parts of the code by the AI at random, hoping that parts of the code will eventually stabilize because of a lucky prompt.
-\end{enumerate}
-
-The fundamental idea behind all of this is to give users back control on their language, with which they interact with their data as well as the underlying description of whatever they are trying to create/describe or retrieve. Instead of the alchemistic streak that vibe coding has, ACE-coding emphasizes the ``engineering''-aspect of ``prompt-engineering''.
-
-One can observe that the semantic-first browser blurs the line between browsing and coding. In a way, the semantic-first browser integrates the browser's development tools into the browser-experience. Instead of having a rich UI and a small search bar/console, the browser becomes a rich search bar/console with a small visual component. The idea feels similar to how the console and bash scripts are used on Unix systems -- as a power user tool but for the web instead of operating systems.
-
-Through this, of course, the initial threshold becomes much higher. But maybe, these are cultural techniques that need to be educated in a modern knowledge society. Maybe it's fine that certain skills are necessary to interact with technology and that's it not merely about a strong will to do whatever it takes, but requires the aggregation of knowledge, learning of skills and cooperation between individuals. And language is and has always been an important tool here.
 
 \subsection{How would it be technically realized?}
 
